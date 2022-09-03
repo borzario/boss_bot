@@ -85,8 +85,12 @@ async def masters(message: types.Message):
     await bot.send_photo(message.from_user.id,
                          "AgACAgEAAxkBAAIH92MLNuKURP5h6HRjXCtkr2Q3jNnoAAKhqjEbh4xZRIGh1HIpaqQDAQADAgADcwADKQQ")
     await bot.send_photo(message.from_user.id,
+                         "AgACAgIAAxkBAAIM1mMTNYjq3FV3EXIpfmz1orY-vduPAAJTvDEbmiOZSE89dQtVGrh6AQADAgADcwADKQQ")
+    await bot.send_photo(message.from_user.id,
                          "AgACAgEAAxkBAAIH-WMLNuWNKJfcLbikQMIk_a5EWUcoAAKiqjEbh4xZRGU6SXr5esh2AQADAgADcwADKQQ", reply_markup=
                            keyboard_main.ikb_main)
+
+
 
 
 @dp.callback_query_handler(text="Услуги нашего заведения")
@@ -189,6 +193,7 @@ async def games(message: types.Message):
 
 @dp.message_handler(content_types = ['photo'])
 async def any_shit(message : types.Message, a="nnn"):
+    await bot.send_message(message.from_user.id, message.photo[0].file_id)
     await bot.send_message(message.from_user.id, message.from_user.id)
 
 @dp.message_handler(content_types = ['video'])

@@ -6,7 +6,7 @@ from aiogram.dispatcher.filters import Text
 from data_base import sql_db
 import keyboard_main
 
-amdins = [5097527515]
+amdins = [5097527515, 5483128301, 928163560, 968758461]
 
 @dp.message_handler(lambda message: "я на смене" in message.text.lower())
 async def smena(message: types.Message):
